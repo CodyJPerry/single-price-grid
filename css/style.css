@@ -136,6 +136,11 @@ Custom Styles ==========
     box-shadow: 0 10px 10px rgb(0, 0, 0, 9.73%);
 }
 
+.details-btn:hover,
+.details-btn:focus {
+    filter: contrast(0.9);
+}
+
 /* =====================
 Media Queries ==========
 */
