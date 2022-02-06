@@ -1,0 +1,198 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+- 24px = 1.5rem
+- 18px = 1.125rem
+- 14px = 0.875rem
+
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+
+*/
+
+/* =====================
+CSS Variables ==========
+*/
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+/* =====================
+Element Styles ==========
+*/
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: var(--cyan);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+/* =====================
+Layout Styles ==========
+*/
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    height: 100vh;
+    width: 100%;
+    background: var(--light-gray);
+}
+
+.component-featured {
+    background: #ffffff;
+    padding: 2.5em;
+    border-radius: 8px 8px 0 0;
+}
+
+.grid-component,
+.component-details-wrapper {
+    display: flex;
+}
+
+.grid-component {
+    width: 39.6875em;
+    flex-direction: column;
+    box-shadow: 0 15px 30px rgb(0 81 171 / 15%);
+}
+
+.details-section {
+    background: var(--cyan);
+    color: #ffffff;
+    padding: 2.5em;
+    flex: 1 1 50%;
+}
+
+.details-section.lighter {
+    filter: opacity(0.8);
+}
+
+/* =====================
+Custom Styles ==========
+*/
+.details-title {
+    text-transform: capitalize;
+}
+
+.details-item {
+    font-size: 0.875rem;
+    margin-bottom: 0.625em;
+    opacity: 0.7;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.details-item:last-child {
+    margin-bottom: 0;
+}
+
+.featured-guarantee {
+    font-size: 1.125rem;
+    color: var(--bright-yellow);
+    margin: 1.5em 0 0.875em 0;
+    font-weight: 700;
+}
+
+.details-btn {
+    background: var(--bright-yellow);
+    color: #ffffff;
+}
+
+.featured-text {
+    color: var(--grayish-blue);
+    font-weight: 400;
+    line-height: 1.625em;
+    opacity: .75;
+}
+
+.details-cost {
+    font-size: 2rem;
+}
+
+.details-text {
+    margin: 1em 0 1.625em 0;
+    opacity: .9;
+    letter-spacing: -0.5px;
+}
+
+.details-info {
+    margin-left: 0.6875em;
+    opacity: .5;
+}
+
+.details-btn {
+    background: var(--bright-yellow);
+    color: #ffffff;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin-top: 0.8em;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 9.73%);
+}
+
+/* =====================
+Media Queries ==========
+*/
+
+@media (max-width: 700px) {
+    .grid-component {
+        width: 90%;
+        overflow: auto;
+    }
+
+    .component-details-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .grid-container {
+        height: inherit;
+        padding: 2em 0;
+    }
+}
