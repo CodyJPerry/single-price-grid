@@ -35,7 +35,6 @@ Layout Styles ==========
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1440px;
     height: 100vh;
     width: 100%;
 }
@@ -165,7 +164,7 @@ Media Queries ==========
     }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 1000px) {
     .grid-container {
         height: inherit;
         padding: 4em 0;
